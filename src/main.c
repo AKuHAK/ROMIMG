@@ -155,7 +155,7 @@ int main(int argc, char **argv)
                 char FOLDER[256] = "ext_";
                 strcat(FOLDER, argv[2]);
                 mkdir(FOLDER
-#ifdef __unix__
+#ifndef _WIN32
                 ,0755
 #endif
                 );
